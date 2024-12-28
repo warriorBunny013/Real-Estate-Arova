@@ -18,7 +18,7 @@ const SignUp = () => {
 
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:3000/api/register", {  
+      const res = await fetch("https://real-estate-arova-85lv.onrender.com/api/register", {  
         method: "POST",
         headers: {
           "Content-Type": "application/json",

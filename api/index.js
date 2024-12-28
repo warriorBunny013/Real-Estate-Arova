@@ -33,7 +33,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin:["http://localhost:5173"],
+  origin:["https://real-estate-arova.onrender.com"],
   methods:["POST","GET","PATCH","PUT","DELETE"],
   credentials:true
 }));

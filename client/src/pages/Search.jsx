@@ -12,7 +12,7 @@ export default function Search() {
     // Fetch data from your backend API
     const fetchListings = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/listings"); // Update with your API endpoint
+        const response = await axios.get("https://real-estate-arova-85lv.onrender.com/api/listings"); // Update with your API endpoint
         setListings(response.data);
         setLoading(false);
       } catch (err) {
