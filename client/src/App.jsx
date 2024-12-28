@@ -31,6 +31,7 @@ const App = () => {
       </Route>
       
        <Route path="/ai-suggestions" element={<AiSuggestions />} />  
+       <Route path="*" element={<div>PAGE NOT FOUND</div>}/>
     </Routes>
     </BrowserRouter>
   )
