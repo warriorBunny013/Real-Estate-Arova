@@ -22,7 +22,7 @@ const SignIn = () => {
 
     try {
       dispatch(signInStart());
-      const res = await fetch("/api/auth/signin", {  
+      const res = await fetch("http://localhost:3000/api/login", {  
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,10 +51,10 @@ const SignIn = () => {
       <h1 className="text-3xl text-center font-semibold mt-4">Sign In</h1>
       <form onSubmit={handleSubmit} className="flex p-10 flex-col gap-4">
         <input
-          type="email"
-          placeholder="Email"
+          type="username"
+          placeholder="username"
           className="border p-3 rounded-lg"
-          id="email"
+          id="username"
           onChange={handleChange}
         />
         <input

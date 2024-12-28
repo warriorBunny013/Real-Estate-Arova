@@ -20,7 +20,7 @@ export default function Home() {
     // Fetch data from your backend API
     const fetchListings = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/listings"); // Update with your API endpoint
+        const response = await axios.get("http://localhost:3000/random-listings"); // Update with your API endpoint
         setListings(response.data);
         setLoading(false);
       } catch (err) {
@@ -99,7 +99,7 @@ export default function Home() {
        
       </div>
       <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Recommended Listings</h1>
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">AI Recommended Listings</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {listings.map((listing) => (
@@ -142,6 +142,20 @@ export default function Home() {
                     />
                   ))}
                 </div>
+              </div>
+
+              {/* View Button */}
+              <div className="mt-4 text-right">
+                <button
+                  className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                  onClick={() => {
+                    // For example, redirect to a detailed view of the listing
+                    // This could be a route like `/listing/${listing._id}` if using React Router
+                    window.location.href = `/listing/${listing._id}`;
+                  }}
+                >
+                  View Listing
+                </button>
               </div>
             </div>
           </div>
