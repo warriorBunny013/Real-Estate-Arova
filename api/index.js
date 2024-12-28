@@ -58,7 +58,7 @@ app.get("/api/listings", async (req, res) => {
 });
 
 // Endpoint to fetch a single listing by its ID
-app.get("/listing/:id", async (req, res) => {
+app.get("/api/listing/:id", async (req, res) => {
   const { id } = req.params;
 
   try {

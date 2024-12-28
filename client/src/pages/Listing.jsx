@@ -39,7 +39,7 @@ const Listing = () => {
     const fetchListing = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`https://real-estate-arova-85lv.onrender.com/listing/${params.listingId}`);
+        const res = await fetch(`https://real-estate-arova-85lv.onrender.com/api/listing/${params.listingId}`);
         const data = await res.json();
         if (data.success === false) {
           setError(true);
